@@ -1,17 +1,23 @@
 import React from "react";
 
-const List = ({ lista }) => {
+const List = ({ lista, onDeleteClicked, counter }) => {
 	const listaa = lista.map((elemento, index) => {
-		if (elemento.split(" ").join("").length > 1) {
-			return (
-				<li key={index}>
-					{elemento}
-					<div className="delLi" />
-				</li>
-			);
-		}
+		return (
+			<li key={index}>
+				{elemento}
+				<i
+					className="delLi fa fa-times"
+					onClick={() => onDeleteClicked(index)}
+				/>
+			</li>
+		);
 	});
-	return <ul>{listaa}</ul>;
+	return (
+		<ul>
+			{listaa}
+			{counter}
+		</ul>
+	);
 };
 
 export default List;
