@@ -1,20 +1,16 @@
 import React from "react";
-class List extends React.Component {
-	constructor(props) {
-		super(props);
-	}
-	render() {
-		var { lista } = this.props;
-		var listaa = [...lista];
-		listaa = lista.map((elemento, index) => {
-			return (
-				<li key={index}>
-					{elemento}
-					<button>x</button>
-				</li>
-			);
-		});
-		return listaa;
-	}
-}
+
+const List = ({ task }) => {
+	const lista = [];
+	lista.concat(task);
+	const listaFin = lista.map((data, index) => {
+		return <li key={index}>{data}</li>;
+	});
+	return (
+		<ul>
+			{listaFin}
+			<button>x</button>
+		</ul>
+	);
+};
 export default List;

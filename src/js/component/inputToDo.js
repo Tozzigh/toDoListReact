@@ -5,8 +5,7 @@ export class InputToDo extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			task: "",
-			lista: ["cao", "daje mo", "ca"]
+			task: ""
 		};
 	}
 	addToList = e => {
@@ -27,7 +26,7 @@ export class InputToDo extends React.Component {
 					onKeyPress={this.addToList}
 				/>
 				<ul>
-					<List lista={this.state.lista} />
+					<List task={this.state.task} />
 				</ul>
 			</div>
 		);
