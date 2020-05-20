@@ -1,17 +1,20 @@
 import React from "react";
-
-const List = ({ lista }) => {
-	const listaa = lista.map((elemento, index) => {
-		if (elemento.split(" ").join("").length > 1) {
+class List extends React.Component {
+	constructor(props) {
+		super(props);
+	}
+	render() {
+		var { lista } = this.props;
+		var listaa = [...lista];
+		listaa = lista.map((elemento, index) => {
 			return (
 				<li key={index}>
 					{elemento}
-					<div className="delLi" />
+					<button>x</button>
 				</li>
 			);
-		}
-	});
-	return <ul>{listaa}</ul>;
-};
-
+		});
+		return listaa;
+	}
+}
 export default List;
