@@ -64,6 +64,9 @@ li:nth-child(odd) {
     border: none;
     background-color: none;
     width: 20px;
-    height: 20px;
+    height: 20px;   
+    display: none; 
 }
-
+.todos:hover .delLi{
+  display: block;
+}

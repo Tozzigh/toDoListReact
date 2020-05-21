@@ -3,7 +3,7 @@ import React from "react";
 const List = ({ lista, onDeleteClicked, counter }) => {
 	const listaa = lista.map((elemento, index) => {
 		return (
-			<li key={index}>
+			<li className="todos" key={index}>
 				{elemento}
 				<i
 					className="delLi fa fa-times"
