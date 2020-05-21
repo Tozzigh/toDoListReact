@@ -21,3 +21,9 @@ const List = ({ lista, onDeleteClicked, counter }) => {
 };
 
 export default List;
+
+List.propTypes = {
+	lista: PropTypes.any,
+	onDeleteClicked: PropTypes.any,
+	counter: PropTypes.any
+};
