@@ -1,5 +1,5 @@
 import React from "react";
-
+import PropTypes from "prop-types";
 const List = ({ lista, onDeleteClicked, counter }) => {
 	const listaa = lista.map((elemento, index) => {
 		return (
